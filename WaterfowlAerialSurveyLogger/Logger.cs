@@ -406,6 +406,7 @@ namespace WaterfowlAerialSurveyLogger
             {
                 if (gamePadState.IsConnected)
                 {
+                    GetWeather(); // update to latest weather inputs
                     if (!gamePadState.Buttons.Equals(previousState.Buttons))
                     {
                         if (gamePadState.Buttons.A == Input.ButtonState.Pressed)
